@@ -1,0 +1,25 @@
+a.logo h1 {
+  font-size: 10px !important;
+}
+
+.btn {
+  background-color: var(--color-primary) !important;
+  padding: 10px 20px !important;
+  outline: none !important;
+  border: none !important;
+  color: white !important;
+}
+.btn i {
+  transition: margin-left ease-in-out 300ms;
+  margin-left: 5px;
+}
+.btn:hover > i {
+  margin-left: 10px !important;
+  transition: margin-left ease-in-out 300ms;
+}
+
+@media screen and (min-width: 768px) {
+  a.logo h1 {
+    font-size: 15px !important;
+  }
+}
