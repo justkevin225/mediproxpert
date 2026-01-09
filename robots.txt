@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mediproxpert.ci/sitemap.xml
+
+# Disallow admin and private areas if any
+Disallow: /node_modules/
+Disallow: /dist/
