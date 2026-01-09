@@ -2,7 +2,7 @@ a.logo h1 {
   font-size: 10px !important;
 }
 
-/* Force green theme on all buttons */
+/* Global Button Styles - Match Hero CTA buttons */
 .btn,
 .btn-primary,
 .btn-secondary,
@@ -12,7 +12,6 @@ a.logo h1 {
 .btn-danger,
 .btn-light,
 .btn-dark,
-/* .btn-outline-primary - handled in main.css for hero section */
 .btn-outline-secondary,
 .btn-outline-success,
 .btn-outline-info,
@@ -20,12 +19,39 @@ a.logo h1 {
 .btn-outline-danger,
 .btn-outline-light,
 .btn-outline-dark {
-  background-color: var(--color-primary) !important;
-  border-color: var(--color-primary) !important;
-  color: white !important;
-  padding: 10px 20px !important;
-  outline: none !important;
+  padding: 16px 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
   font-family: var(--font-primary) !important;
+  outline: none !important;
+  border: 2px solid transparent !important;
+}
+
+/* Primary buttons (filled) */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-light,
+.btn-dark,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-info,
+.btn-outline-warning,
+.btn-outline-danger,
+.btn-outline-light,
+.btn-outline-dark {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-inverse) !important;
+  box-shadow: 0 4px 15px rgba(var(--color-primary-rgb), 0.3) !important;
 }
 
 .btn:hover,
@@ -53,7 +79,6 @@ a.logo h1 {
 .btn-danger:focus,
 .btn-light:focus,
 .btn-dark:focus,
-.btn-outline-primary:focus,
 .btn-outline-secondary:focus,
 .btn-outline-success:focus,
 .btn-outline-info:focus,
@@ -61,18 +86,52 @@ a.logo h1 {
 .btn-outline-danger:focus,
 .btn-outline-light:focus,
 .btn-outline-dark:focus {
-  background-color: rgba(var(--color-primary-rgb), 0.85) !important;
-  border-color: rgba(var(--color-primary-rgb), 0.85) !important;
-  color: white !important;
+  background: rgba(var(--color-primary-rgb), 0.9) !important;
+  border-color: rgba(var(--color-primary-rgb), 0.9) !important;
+  color: var(--color-inverse) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(var(--color-primary-rgb), 0.4) !important;
 }
 
-.btn i {
-  transition: margin-left ease-in-out 300ms;
-  margin-left: 5px;
+/* Outline primary buttons */
+.btn-outline-primary {
+  background: transparent !important;
+  border: 2px solid var(--color-primary) !important;
+  color: var(--color-primary) !important;
+  box-shadow: none !important;
 }
-.btn:hover > i {
-  margin-left: 10px !important;
-  transition: margin-left ease-in-out 300ms;
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: transparent !important;
+  border-color: rgba(var(--color-primary-rgb), 0.7) !important;
+  color: rgba(var(--color-primary-rgb), 0.7) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.2) !important;
+}
+
+/* Button icons */
+.btn i {
+  transition: margin-left ease-in-out 300ms !important;
+  margin-left: 8px !important;
+}
+
+.btn:hover > i,
+.btn:focus > i {
+  margin-left: 12px !important;
+  transition: margin-left ease-in-out 300ms !important;
+}
+
+/* Small buttons */
+.btn-sm {
+  padding: 12px 24px !important;
+  font-size: 14px !important;
+}
+
+/* Large buttons */
+.btn-lg {
+  padding: 16px 32px !important;
+  font-size: 16px !important;
 }
 
 /* Ensure Montserrat is used everywhere */
@@ -83,19 +142,6 @@ body,
 .navmenu ul,
 .navmenu li {
   font-family: var(--font-primary) !important;
-}
-
-/* Hero section buttons - override global button styles */
-.hero-cta .btn-outline-primary {
-  background: transparent !important;
-  border: 2px solid var(--color-primary) !important;
-  color: var(--color-primary) !important;
-}
-
-.hero-cta .btn-outline-primary:hover {
-  background: transparent !important;
-  border-color: rgba(var(--color-primary-rgb), 0.7) !important;
-  color: rgba(var(--color-primary-rgb), 0.7) !important;
 }
 
 @media screen and (min-width: 768px) {
