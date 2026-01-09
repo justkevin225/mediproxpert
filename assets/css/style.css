@@ -149,3 +149,10 @@ body,
     font-size: 15px !important;
   }
 }
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+.bg-white:hover {
+  background-color: #ffffff !important;
+}
