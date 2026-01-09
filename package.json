@@ -2,8 +2,11 @@
   "name": "mediproxpert",
   "version": "1.0.0",
   "description": "MediproXpert - Votre partenaire santé de confiance",
+  "type": "module",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "npm run dev"
   },
   "keywords": [
@@ -14,6 +17,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "vite": "^5.0.0"
   }
 }

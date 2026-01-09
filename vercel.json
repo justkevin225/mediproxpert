@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/mentions-legales",
       "destination": "/pages/mentions-legales.html"
     },
