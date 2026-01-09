@@ -1,9 +1,33 @@
-import { readFileSync } from "fs";
+import {
+  copyFileSync,
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+} from "fs";
+import { join } from "path";
 import { defineConfig } from "vite";
 
 // Lire les rewrites depuis vercel.json
 const vercelConfig = JSON.parse(readFileSync("vercel.json", "utf-8"));
 const rewrites = vercelConfig.rewrites || [];
+
+// Fonction pour copier récursivement un dossier
+function copyDir(src, dest) {
+  if (!existsSync(dest)) {
+    mkdirSync(dest, { recursive: true });
+  }
+  const entries = readdirSync(src, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = join(src, entry.name);
+    const destPath = join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      copyFileSync(srcPath, destPath);
+    }
+  }
+}
 
 export default defineConfig({
   build: {
@@ -46,6 +70,18 @@ export default defineConfig({
 
           next();
         });
+      },
+    },
+    {
+      name: "copy-assets",
+      writeBundle() {
+        // Copier le dossier assets après le build
+        const assetsSrc = join(process.cwd(), "assets");
+        const assetsDest = join(process.cwd(), "dist", "assets");
+        if (existsSync(assetsSrc)) {
+          copyDir(assetsSrc, assetsDest);
+          console.log("✅ Assets copiés dans dist/assets");
+        }
       },
     },
   ],
