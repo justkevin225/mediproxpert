@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "MediproXpert - Votre partenaire santé de confiance",
   "scripts": {
-    "dev": "npx live-server --port=3000 --host=0.0.0.0 --open=/index.html",
+    "dev": "node server.js",
     "start": "npm run dev"
   },
   "keywords": [
