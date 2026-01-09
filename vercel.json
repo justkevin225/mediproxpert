@@ -1,0 +1,40 @@
+{
+  "rewrites": [
+    {
+      "source": "/mentions-legales",
+      "destination": "/pages/mentions-legales.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/pages/about.html"
+    },
+    {
+      "source": "/a-propos",
+      "destination": "/pages/about.html"
+    },
+    {
+      "source": "/conseil",
+      "destination": "/pages/conseil.html"
+    },
+    {
+      "source": "/distribution",
+      "destination": "/pages/distribution.html"
+    },
+    {
+      "source": "/equipements",
+      "destination": "/pages/equipements.html"
+    },
+    {
+      "source": "/formation",
+      "destination": "/pages/formation.html"
+    },
+    {
+      "source": "/materiel",
+      "destination": "/pages/materiel.html"
+    },
+    {
+      "source": "/promotion",
+      "destination": "/pages/promotion.html"
+    }
+  ]
+}
